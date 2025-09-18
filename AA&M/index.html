@@ -376,7 +376,7 @@
             // Redirigir a la canción después de 5 segundos
             setTimeout(function() {
                 window.location.href = "https://youtu.be/kq1J16ZKQIw?si=GIfmCIjHip-Gp8yG";
-            }, 5000);
+            }, 3000);
         });
         
         // Efecto para la opción NO
@@ -389,7 +389,11 @@
             
             // Cerrar la pestaña después de 3 segundos
             setTimeout(function() {
+                // Intenta cerrar la ventana (puede no funcionar en algunos navegadores)
                 window.close();
+                
+                // Redirige a una página en blanco si no se puede cerrar
+                document.body.innerHTML = '<div style="display:flex; justify-content:center; align-items:center; height:100vh; background:#0a0a0a; color:#8a0e0e; font-size:2rem;">💔 Adiós...</div>';
             }, 3000);
         });
         
